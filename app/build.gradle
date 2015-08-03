@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "21.1.2"
+    defaultConfig {
+        applicationId "com.example.evgeni.apartmentadvertisments"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile files('libs/picasso-2.5.2.jar')
+    compile 'com.facebook.android:facebook-android-sdk:4.0.0'
+    compile files('libs/ParseLib/Parse-1.9.1.jar')
+    compile files('libs/ParseLib/ParseCrashReporting-1.9.1.jar')
+    compile files('libs/ParseLib/ParseFacebookUtilsV4-1.9.1.jar')
+}

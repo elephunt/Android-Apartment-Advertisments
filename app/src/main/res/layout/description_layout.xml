@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:id="@+id/scrollView2"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0.19">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextDescription"
+            android:layout_gravity="center_horizontal"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="20dp" />
+    </ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="סיים"
+        android:id="@+id/buttonDescription"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

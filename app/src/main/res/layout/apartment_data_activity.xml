@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:contentDescription="Rate of Apartment"
+    android:weightSum="1"
+    android:background="@drawable/rounded_corner">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView3" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_border">
+
+                <ScrollView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/scrollView4" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:id="@+id/textViewLocation"
+                        android:layout_marginLeft="10dp" />
+                </ScrollView>
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="מצא את הבניין"
+                    android:id="@+id/button3"
+                    android:onClick="locationButtonClicked"
+                    android:background="@drawable/button_shape"
+                    android:layout_marginLeft="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_border">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="150dp">
+
+                    <NumberPicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/numberPicker"
+                        android:nestedScrollingEnabled="true" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="מספר דירה"
+                    android:id="@+id/textView"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_border">
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextNameOfOwner"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="50dp"
+                    android:inputType="textCapWords|textPersonName" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="בעל הבית"
+                    android:id="@+id/textView2"
+                    android:layout_marginLeft="70dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_border">
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/editTextPrice"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="50dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="מחיר"
+                    android:id="@+id/textView3"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_border">
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBar"
+                    android:clickable="true"
+                    android:numStars="5"
+                    android:layout_marginLeft="50dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="דרג"
+                    android:id="@+id/textView4"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rectangle_border">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textViewStartDateRent" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="תאריך התחלה"
+                    android:id="@+id/button"
+                    android:onClick="startDateRentButtonClicked"
+                    android:layout_marginLeft="150dp"
+                    android:background="@drawable/button_shape"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rectangle_border">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textViewEndDateRent" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="תאריך סיום"
+                    android:id="@+id/button2"
+                    android:onClick="endDateRentButtonClicked"
+                    android:layout_marginLeft="150dp"
+                    android:background="@drawable/button_shape"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_border">
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
+                    android:id="@+id/scrollView" >
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="105dp"
+                        android:inputType="textMultiLine"
+                        android:ems="10"
+                        android:id="@+id/editTextReview"
+                        android:editable="true"
+                        android:onClick="descriptionDialogClicked"
+                        android:focusable="false" />
+                </ScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="פרט"
+                    android:id="@+id/textView5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="עלה/צלם תמונה.."
+                android:id="@+id/buttonTakePhoto"
+                android:onClick="launchCameraButtonClicked"
+                android:layout_marginLeft="150dp"
+                android:enabled="true"
+                android:layout_gravity="right"
+                android:nestedScrollingEnabled="false"
+                android:background="@drawable/button_shape"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonCamera"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+                <LinearLayout
+                    android:id="@+id/mygallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    />
+            </HorizontalScrollView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="הוסף"
+                android:id="@+id/buttonAddApartment"
+                android:layout_gravity="center_horizontal"
+                android:singleLine="true"
+                android:onClick="AddApartmentButtonClicked"
+                android:background="@drawable/button_shape"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
